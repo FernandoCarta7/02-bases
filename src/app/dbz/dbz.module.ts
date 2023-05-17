@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { MainPageComponent } from './pages/main-pages.component';
 import { ListComponent } from './components/list/list.component';
+import { AddCharacterComponent } from './components/list/add-character/add-character.component';
 
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    ListComponent
+    ListComponent,
+    AddCharacterComponent
   ],
 
   exports:[
