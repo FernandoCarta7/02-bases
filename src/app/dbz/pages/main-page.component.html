@@ -1,3 +1,12 @@
-<h1>DBZ Main Page</h1>
+<h1>DBZ personajes</h1>
 <hr>
-<app-dbz-add-character></app-dbz-add-character>
+
+<div class="row">
+  <div class="col">
+    <app-dbz-list [characterList]="characters"></app-dbz-list>
+  </div>
+  <div class="col">
+
+    <app-dbz-add-character></app-dbz-add-character>
+  </div>
+</div>
