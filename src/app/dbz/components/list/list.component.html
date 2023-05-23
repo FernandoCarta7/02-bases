@@ -1,11 +1,28 @@
-
 <h4>LISTADO</h4>
 <ul class="list-group">
-  <li *ngFor="let character of characterList" class="list-group-item">
-    <strong> Name: </strong>
-    <span>{{ character.name }}</span>
-    <strong> Power: </strong>
-    <span>{{ character.power }}</span>
+  <li *ngFor="
+  let character of characterList;
+  let i = index;
+  let isLast = last;
+  let isFirts = first;"
+  class="list-group-item d-flex justify-content-between aling-items-center"
+  [ngClass]="{
+    'list-group-item-dark' : isLast,
+    'list-group-item-primary':isFirts}">
+    <div>
+      <!--Indice-->
+      <span class="text-primary"> {{ i + 1 }} </span>
+
+      <!--Nombre-->
+      <span>{{ character.name }}</span>
+
+      <!--Poder-->
+      <strong> Power: </strong>
+      <span>{{ character.power }}</span>
+    </div>
+    <button (click)="onDeleteCharacter(i)" class="btn btn-danger ">BORRAR</button>
+
+
   </li>
 
 
